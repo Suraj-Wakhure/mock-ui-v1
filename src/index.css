@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-app: #F7F8F6;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F0F2EF;
+  --border: #D9DEDA;
+  --text-primary: #17201D;
+  --text-secondary: #5F6965;
+  --text-muted: #8A928E;
+  --brand: #0B5F63;
+  --brand-dark: #08484B;
+  --brand-subtle: rgba(11, 95, 99, 0.08);
+  --accent-copper: #B56A32;
+  --success: #19734A;
+  --warning: #A96800;
+  --danger: #B43A35;
+  --info: #315F9E;
+}
+
+.dark {
+  --bg-app: #0F1413;
+  --bg-surface: #151B19;
+  --bg-subtle: #1C2421;
+  --border: #2A3430;
+  --text-primary: #EDF2EF;
+  --text-secondary: #A9B3AE;
+  --text-muted: #6F7A75;
+  --brand: #5EB4B3;
+  --brand-dark: #3D8E8D;
+  --brand-subtle: rgba(94, 180, 179, 0.12);
+  --accent-copper: #D18A4A;
+  --success: #289E68;
+  --warning: #C27F0A;
+  --danger: #D44A45;
+  --info: #467DC7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Outfit', 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbars for dense enterprise data */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Leaflet map styles customisation for restrained theme */
+.leaflet-container {
+  font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+  background-color: var(--bg-subtle) !important;
+}
+
+.dark .leaflet-tile-pane {
+  filter: brightness(0.7) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+  border-radius: 4px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  padding: 2px !important;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--bg-surface) !important;
+}
